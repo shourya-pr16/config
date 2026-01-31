@@ -4,4 +4,4 @@ require 'nvim-treesitter'.setup {
   install_dir = vim.fn.stdpath('data') .. '/site'
 };
 
-require 'nvim-treesitter'.install { 'rust', 'java', 'zig' };
+require 'nvim-treesitter'.install { 'rust', 'java', 'zig', 'go' , 'yaml', 'json', 'bash' };
