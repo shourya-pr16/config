@@ -9,6 +9,7 @@ return {
 				"shfmt", -- Shell formatter
 				"gofumpt", -- Go formatter
 				"goimports", -- Go imports
+				"lua-language-server", -- Lua
 			},
 			run_on_start = true, -- install missing tools on startup
 			auto_update = false,
