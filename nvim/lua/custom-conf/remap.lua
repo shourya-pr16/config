@@ -9,3 +9,5 @@ vim.keymap.set("n", "<leader>cd", function()
 	local newDir = vim.fn.input("Change Directory to > ")
 	vim.fn.chdir(newDir) -- changing for global
 end, { desc = " Change directory " })
+
+vim.keymap.set({ "n", "v" }, "<C-S-c>", '"+y', { desc = "Copy to system clipboard " })

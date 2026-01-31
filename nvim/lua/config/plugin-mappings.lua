@@ -24,4 +24,4 @@ vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, s
 vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>:Lazy<CR>")
 
 -- lazy git mapping
-vim.keymap.set({ "n" }, "<leader>g", "<cmd>:LazyGit<CR>")
+vim.keymap.set({ "n" }, "<leader>~", "<cmd>:LazyGit<CR>")
