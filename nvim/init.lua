@@ -6,3 +6,5 @@ require("config.plugin-settings")
 -- LSP
 vim.lsp.enable("luals")
 vim.lsp.enable("golsp")
+vim.lsp.enable("javalsp")
+vim.lsp.enable("zls_lsp")
