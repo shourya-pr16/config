@@ -42,3 +42,7 @@ end)
 vim.keymap.set("n", "<C-4>", function()
 	ui.nav_file(4)
 end)
+
+-- explorer
+vim.keymap.set("n", "<leader>e", "<cmd>:Neotree toggle<CR>", { desc = "Open explorer" })
+vim.keymap.set("n", "P", "<cmd>:Neotree toggle_preview<CR>", { desc = "Toggle preview" })

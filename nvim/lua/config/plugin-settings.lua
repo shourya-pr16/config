@@ -4,4 +4,6 @@ require("nvim-treesitter").setup({
 	install_dir = vim.fn.stdpath("data") .. "/site",
 })
 
-require("nvim-treesitter").install({ "rust", "java", "zig", "go", "yaml", "json", "bash", "gomod" })
+require("nvim-treesitter").install({ "rust", "java", "zig", "go", "yaml", "json", "bash", "gomod", "gowork" })
+
+vim.cmd([[colorscheme habamax]])

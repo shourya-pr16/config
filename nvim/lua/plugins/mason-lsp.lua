@@ -9,6 +9,7 @@ return {
 				"lua_ls",
 				"jdtls",
 				"zls",
+				"helm_ls",
 			}, -- install LSP
 			automatic_installation = true, -- auto install if missing
 		})
