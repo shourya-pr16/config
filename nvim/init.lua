@@ -4,6 +4,7 @@ vim.g.loaded_tutor_mode_plugin = 1
 
 require("custom-conf")
 require("config.lazy")
+require("config.dap-config")
 require("config.plugin-mappings")
 require("config.plugin-settings")
 
