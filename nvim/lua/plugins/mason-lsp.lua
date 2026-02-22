@@ -10,6 +10,8 @@ return {
 				"jdtls",
 				"zls",
 				"helm_ls",
+				"html",
+				"ts_ls",
 			}, -- install LSP
 			automatic_installation = true, -- auto install if missing
 		})
