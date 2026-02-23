@@ -12,7 +12,7 @@ require("config.plugin-settings")
 -- LSP
 vim.lsp.enable("luals")
 vim.lsp.enable("golsp")
-vim.lsp.enable("javalsp")
+-- vim.lsp.enable("javalsp")
 vim.lsp.enable("zls_lsp")
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -20,9 +20,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local bufnr = args.buf
 		local opts = { buffer = bufnr, silent = true }
 
-		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		vim.keymap.set("n", "gd", function()
+			vim.cmd("belowright split")
+			vim.lsp.buf.definition()
+		end, opts)
+
+		vim.keymap.set("n", "gD", function()
+			vim.cmd("vsplit")
+			vim.lsp.buf.declaration()
+		end, opts)
+
+		vim.keymap.set("n", "gi", function()
+			vim.cmd("belowright split")
+			vim.lsp.buf.implementation()
+		end, opts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)

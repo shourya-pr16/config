@@ -10,6 +10,8 @@ return {
 				"gofumpt", -- Go formatter
 				"goimports", -- Go imports
 				"lua-language-server", -- Lua
+				"java-debug-adapter",
+				"java-test",
 			},
 			run_on_start = true, -- install missing tools on startup
 			auto_update = false,

@@ -7,7 +7,7 @@ local dap_virtual_text = require("nvim-dap-virtual-text")
 dap_virtual_text.setup()
 
 mason_dap.setup({
-	ensure_installed = { "delve" },
+	ensure_installed = { "delve", "java-debug-adapter" },
 	automatic_installation = true,
 	handlers = {
 		function(config)
@@ -15,6 +15,10 @@ mason_dap.setup({
 		end,
 	},
 })
+
+-- ======================
+-- GO
+-- ======================
 
 dap.adapters.delve = function(callback, config)
 	if config.mode == "remote" and config.request == "attach" then
@@ -59,6 +63,27 @@ dap.configurations.go = {
 		request = "launch",
 		mode = "test",
 		program = "./${relativeFileDirname}",
+	},
+}
+
+-- ======================
+-- JAVA
+-- ======================
+
+-- Enable DAP
+-- local jdtls = require("jdtls")
+-- jdtls.setup_dap({ hotcodereplace = "auto" })
+
+-- Basic launch configuration
+dap.configurations.java = {
+	{
+		type = "java",
+		request = "attach",
+		name = "Attach to Java (port 5005)",
+		hostName = "127.0.0.1",
+		port = function()
+			return tonumber(vim.fn.input("Enter Debug Port: "))
+		end,
 	},
 }
 
