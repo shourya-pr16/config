@@ -40,3 +40,10 @@ vim.keymap.set("v", "<leader>{", ":lua WrapSelectionWith('{')<CR>", { noremap = 
 vim.keymap.set("v", "<leader>[", ":lua WrapSelectionWith('[')<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<leader>(", ":lua WrapSelectionWith('(')<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<leader><", ":lua WrapSelectionWith('<')<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", '<leader>"', ":lua WrapSelectionWith('\"')<CR>", { noremap = true, silent = true })
+
+-- window resizing
+vim.keymap.set("n", "<M->>", "<C-w>>", { desc = "Resize window right" })
+vim.keymap.set("n", "<M-<>", "<C-w><", { desc = "Resize window right" })
+vim.keymap.set("n", "<M-=>", "<C-w>+", { desc = "Resize window right" })
+vim.keymap.set("n", "<M-->", "<C-w>-", { desc = "Resize window right" })
