@@ -12,6 +12,7 @@ return {
 				"helm_ls",
 				"html",
 				"ts_ls",
+				"rust_analyzer",
 			}, -- install LSP
 			automatic_installation = true, -- auto install if missing
 		})

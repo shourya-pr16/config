@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<C-Tab", "gt", { desc = "Next Tab" })
-vim.keymap.set("n", "<C-S-Tab>", "gT", { desc = "Previous Tab" })
+vim.keymap.set("n", "<M-Tab>", "gt", { desc = "Next Tab" })
+vim.keymap.set("n", "<M-S-Tab>", "gT", { desc = "Previous Tab" })
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
 
@@ -47,3 +47,12 @@ vim.keymap.set("n", "<M->>", "<C-w>>", { desc = "Resize window right" })
 vim.keymap.set("n", "<M-<>", "<C-w><", { desc = "Resize window right" })
 vim.keymap.set("n", "<M-=>", "<C-w>+", { desc = "Resize window right" })
 vim.keymap.set("n", "<M-->", "<C-w>-", { desc = "Resize window right" })
+
+-- Buffer Switching
+-- vim.keymap.set("n", "<M-b>", ":Telescope buffers<CR>", { desc = "Open fuzzy search in buffers" })
+vim.keymap.set("n", "<M-Right>", "<cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<M-Left>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+
+-- move lines
+vim.keymap.set("n", "<M-Down>", "<cmd>move +1<cr>", { desc = "Move line down" })
+vim.keymap.set("n", "<M-Up>", "<cmd>move -2<cr>", { desc = "Move line up" })

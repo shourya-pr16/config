@@ -9,6 +9,7 @@ return {
 			bash = { "shfmt" },
 			zsh = { "shfmt" },
 			go = { "gofumpt", "goimports" },
+			rust = { "rust_analyzer" },
 		},
 
 		format_on_save = {
